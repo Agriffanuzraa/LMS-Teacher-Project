@@ -34,7 +34,7 @@ if (isset($_POST["cari"])){
 
         <!-- kalo action dikosongin berarti tampilnya di halaman ini aja -->
         <form action="" method="post" class="search">
-            <input type="text" name="keyword" size="30" autofocus placeholder="masukan keywoard pencarian..." autocomplete="off">
+            <input type="text" name="keyword" size="30" autofocus placeholder="masukan keyword pencarian..." autocomplete="off">
             <button type="submit" name = "cari">🔍search</button>
         </form>
         <form action="chart.php" method="post">
