@@ -40,9 +40,6 @@ if (isset($_POST["cari"])){
         <form action="chart.php" method="post">
             <button type="submit" name = "stat">📈statistic</button>
         </form>
-        <form action="tambahNilai" method="post">
-            <button type="submit" name = "matkul1">💯nilai</button>
-        </form>
 
 
     </div>
@@ -71,7 +68,7 @@ if (isset($_POST["cari"])){
             </td>
             <td><?=$st["NIS"]?></td>
             <td>
-                <a href="nilai.php?=id<?=$st["id"]?>"><?=$st["nama"]?></a>
+                <a href="nilai.php?id=<?=$st["id"]?>"><?=$st["nama"]?></a>
             </td>
             <td><?=$st["email"]?></td>
             <td><?=$st["domisili"]?></td>

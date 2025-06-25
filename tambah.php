@@ -34,7 +34,7 @@
     <link rel="stylesheet" href="stylesss.css">
 </head>
 <body>
-    <h1>Tambah data student</h1>
+    <h1>Tambah Data mahasiswa</h1>
     <div class="containerAdd">
         <form action="" method="post">
             <label for="NIS">NIS:</label>
