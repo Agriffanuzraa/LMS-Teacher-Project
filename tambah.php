@@ -54,7 +54,7 @@
             <input type="file" name="foto" id="foto">
             <button type="submit" name="submit">submit</button>
         </form>
-        <button class="back"><a href="pertemuan9_part2.php">🔙 Kembali</a></button>
+        <button class="back"><a href="index.php">🔙 Kembali</a></button>
     </div>
     
 </body>

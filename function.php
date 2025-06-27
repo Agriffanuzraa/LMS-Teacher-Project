@@ -1,5 +1,5 @@
 <?php
-  $conn = mysqli_connect("localhost","root","","phpdasar");
+  $conn = mysqli_connect("localhost","gripacode","5Maret2002","gripacode");
 
 
   function query($query){

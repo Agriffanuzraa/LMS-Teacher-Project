@@ -67,7 +67,7 @@ $jsondata2 = json_encode($datapoint2);
 		<div class="chartContainer2">
 			<div id="chartContainer2" style="height: 300px; width: 100%;"></div>
 		</div>
-		<button class="back"><a href="pertemuan9_part2.php">🔙 Kembali</a></button>
+		<button class="back"><a href="index.php">🔙 Kembali</a></button>
 	<script>
 		function chart1() {
 		var chart = new CanvasJS.Chart("chartContainer", {

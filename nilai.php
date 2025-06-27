@@ -31,7 +31,7 @@
             <input type="number" name="matkul2" id="matkul2" placeholder="masukan nilai matkul nilai kedua">
             <button type="submit" name="submit">submit</button>
         </form>
-        <button class="back"><a href="pertemuan9_part2.php">🔙 Kembali</a></button>
+        <button class="back"><a href="index.php">🔙 Kembali</a></button>
     </div>
 </body>
 </html>
