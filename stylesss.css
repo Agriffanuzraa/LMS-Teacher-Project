@@ -3,10 +3,10 @@
     margin: 0;
     box-sizing: border-box;
     font-family: poppins;
-    background-color: pink;
 }
 
 body {
+    background-color: pink;
     /* background-color: #f4f6f8; */
     padding: 2rem;
     color: #333;
@@ -134,7 +134,7 @@ a:hover{
 }
 
 
-.containerAdd form{
+.containerAdd form, .upload form{
     padding: 2rem;
     gap: 1rem;
     display: flex;
@@ -142,6 +142,8 @@ a:hover{
     background: white;
     align-items: center;
 }
+
+
 .containerAdd form input{
     border: none;
     width: 50%;
@@ -175,3 +177,44 @@ button:hover{
     margin-left:10rem;
 }
 
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 30px;
+  border: 2px solid #888;
+  width: 60%;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(0,0,0,0.5);
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  animation: zoomIn 0.5s ease;
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.7); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: red;
+}

@@ -45,7 +45,14 @@ if (isset($_POST["cari"])){
     </div>
     <!-- end navigation bar -->
 
-
+    <!-- modals -->
+    <div id="welcomeModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>👋 Haloo!</h2>
+            <p>Selamat datang sengkuuuu😊<br>Semoga capenya ilang abis liat ini ixixi😄!<br>tolong kasih saran di whatsApp yaa thankyouu!<br>Happy Testing!<br><strong> Love you!❤️</strong></p>
+        </div>
+    </div>
     <table border="1" cellpadding="10" cellspacing="0">
         <th>No</th>
         <th>Aksi</th>
@@ -64,7 +71,7 @@ if (isset($_POST["cari"])){
                 <a href="hapus.php?id=<?=$st["id"]?>" onclick="return confirm('yakin?')">🗑️hapus</a>
             </td>
             <td>
-                <img src="Agriffa.jpeg" alt="student1" style="width: 2rem;height:2rem;">
+                <img src="img/<?=$st["foto"]?>" alt="student1" style="width: 2rem;height:2rem;">
             </td>
             <td><?=$st["NIS"]?></td>
             <td>
@@ -76,5 +83,26 @@ if (isset($_POST["cari"])){
         <?php $i++;?>
         <?php endforeach;?>
     </table>
+    <script>
+    window.onload = function () {
+    if (!sessionStorage.getItem("welcomeShown")) {
+        const modal = document.getElementById("welcomeModal");
+        const span = document.getElementsByClassName("close")[0];
+
+        modal.style.display = "block";
+        sessionStorage.setItem("welcomeShown", "true");
+
+        span.onclick = function () {
+        modal.style.display = "none";
+        }
+
+        window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+        }
+    }
+    };
+</script>
 </body>
 </html>
