@@ -1,9 +1,9 @@
 {
-  "functions": {
-    "api/index.php": {
-      "runtime": "vercel-php@0.6.1"
+    "functions": {
+    "api/index.js": {
+      "runtime": "nodejs18"
     }
-  },
+    },
   "routes": [
     {
       "src": "/(.*)",
