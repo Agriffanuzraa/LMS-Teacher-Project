@@ -2,11 +2,26 @@
     require 'function.php';
     $id = $_GET['id'];
     $student = query("SELECT * FROM student WHERE id = $id")[0];
+    $ceknilai = mysqli_query($conn, "SELECT * FROM nilai WHERE id_student = $id");
     if(isset($_POST["submit"])){
         $nilaimk1 = $_POST["matkul1"];
         $nilaimk2 = $_POST["matkul2"];
-        $insertnilai = "INSERT INTO nilai(id_student,matkul1,matkul2) VALUES ($id,$nilaimk1,$nilaimk2)";
-        mysqli_query($conn,$insertnilai);
+
+        if (mysqli_num_rows($ceknilai)>0){
+            $updateNilai = "UPDATE nilai SET matkul1 = $nilaimk1,matkul2=$nilaimk2 WHERE id_student = $id";
+            mysqli_query($conn,$updateNilai);
+            echo "<script>
+            alert('data berhasil diupdate');
+            document.location.href = 'index.php';
+            </script>";
+        } else {
+            $insertnilai = "INSERT INTO nilai(id_student,matkul1,matkul2) VALUES ($id,$nilaimk1,$nilaimk2)";
+            mysqli_query($conn,$insertnilai);
+            echo "<script>
+            alert('data nilai berhasil ditambahkan');
+            document.location.href = 'index.php';
+            </script>";
+        }
     }
 
 ?>

@@ -57,11 +57,11 @@
             <input type="text" name="domisili" id="domisili" value="<?php echo $dt['domisili'] ?>" required>
             <label for="foto">foto:</label>
             <img src="img/<?php echo $dt['foto'] ?>" alt="nophoto.jpg" style="width: 6rem;height=6rem">
-            <input type="file" name="foto" id="foto" value="<?php $dt['foto'] ?>" required>
+            <input type="file" name="foto" id="foto" value="<?php $dt['foto'] ?>">
             <button type="submit" name="upload">Upload data</button>
         </form>
     </div>
     <?php endforeach;?> 
-    <button class="back"><a href="index.php">🔙 Kembali</a></button>
+    <button class="back" onclick="window.location.href='index.php'">🔙 Kembali</a></button>
 </body>
 </html> 

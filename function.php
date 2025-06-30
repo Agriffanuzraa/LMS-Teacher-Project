@@ -95,7 +95,6 @@
     //cek apakah user pilih gambar baru atau engga
     $gambarLama = htmlspecialchars($id["gambarLamaa"]);
     $foto = htmlspecialchars($id["foto"]);
-    echo $nis,$name,$email,$domisili,$foto;
     if ($_FILES['foto']['error'] == 4){
       $foto = $gambarLama;
     } else {
