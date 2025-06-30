@@ -14,7 +14,7 @@ if (isset($_POST["cari"])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>connect php+sql</title>
+    <title>Home-Learning Management Systems</title>
     <link rel="stylesheet" href="stylesss.css">
 </head>
 <body>
@@ -50,7 +50,7 @@ if (isset($_POST["cari"])){
         <div class="modal-content">
             <span class="close">&times;</span>
             <h2>👋 Haloo!</h2>
-            <p>Selamat datang sengkuuuu😊<br>Semoga capenya ilang abis liat ini ixixi😄!<br>tolong kasih saran di whatsApp yaa thankyouu!<br>Happy Testing!<br><strong> Love you!❤️</strong></p>
+            <p>Selamat datang 😊</p>
         </div>
     </div>
     <table border="1" cellpadding="10" cellspacing="0">
@@ -66,7 +66,7 @@ if (isset($_POST["cari"])){
 
         <tr>
             <td><?=$i?></td>
-            <td>
+            <td class="edited">
                 <a href="ubah.php?id=<?=$st["id"]?>">✏️ubah</a>  |
                 <a href="hapus.php?id=<?=$st["id"]?>" onclick="return confirm('yakin?')">🗑️hapus</a>
             </td>
@@ -74,8 +74,8 @@ if (isset($_POST["cari"])){
                 <img src="img/<?=$st["foto"]?>" alt="student1" style="width: 2rem;height:2rem;">
             </td>
             <td><?=$st["NIS"]?></td>
-            <td>
-                <a href="nilai.php?id=<?=$st["id"]?>"><?=$st["nama"]?></a>
+            <td class="name">
+                <a href="nilai.php?id=<?=$st["id"]?>" title="klik bagian nama untuk mengisi nilai"><?=$st["nama"]?></a>
             </td>
             <td><?=$st["email"]?></td>
             <td><?=$st["domisili"]?></td>

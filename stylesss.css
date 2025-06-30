@@ -145,7 +145,7 @@ a:hover{
 
 
 .containerAdd form input{
-    border: none;
+    border: 1px solid black;
     width: 50%;
     height: 2rem;
     border-radius: 6px;
@@ -217,4 +217,23 @@ button:hover{
 
 .close:hover {
   color: red;
+}
+
+.edited a{
+    color:rgb(13, 107, 138);
+    font-weight: 700;
+}
+.edited a:hover{
+    color:rgb(4, 9, 10);
+}
+
+.name a{
+    color:#2c3e50;
+    font-weight: 500;
+    transition: transform 0.3s ease;
+}
+.name a:hover{
+    color:#011222;
+    font-weight: 700;
+    transform: scale(1.1);
 }

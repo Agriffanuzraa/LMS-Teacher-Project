@@ -18,7 +18,7 @@
         if(tambah($_POST)>0){
             echo "<script>
             alert('data berhasil ditambahkan');
-            document.location.href = 'pertemuan9_part2.php';
+            document.location.href = 'index.php';
             </script>";
         }else{
             echo "<script>
@@ -41,7 +41,7 @@
     <div class="containerAdd">
         <form action="" method="post" enctype="multipart/form-data">
             <label for="NIS">NIS:</label>
-            <input type="text" name="NIS" id="NIS" placeholder="masukan nomor mahasiswa">
+            <input type="number" name="NIS" id="NIS" placeholder="masukan nomor mahasiswa">
             <label for="nama">Name:</label>
             <input type="text" name="nama" id="nama" placeholder="masukan nama lengkap">
             <label for="email">Email:</label>
@@ -54,7 +54,7 @@
             <input type="file" name="foto" id="foto">
             <button type="submit" name="submit">submit</button>
         </form>
-        <button class="back"><a href="index.php">🔙 Kembali</a></button>
+    <button class="back" onclick="window.location.href='index.php'">🔙 Kembali</button>
     </div>
     
 </body>

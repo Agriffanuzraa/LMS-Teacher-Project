@@ -45,22 +45,23 @@
 
         <tr>
             <td><?=$i?></td>
-            <td>
-                <a href="ubah.php?id=<?=$st["id"]?>">ubah</a>|
-                <a href="hapus.php?id=<?=$st["id"]?>" onclick="return confirm('yakin?')">hapus</a>
+            <td class="edited">
+                <a href="ubah.php?id=<?=$st["id"]?>">✏️ ubah</a>|
+                <a href="hapus.php?id=<?=$st["id"]?>" onclick="return confirm('yakin?')">🗑️ hapus</a>
             </td>
             <td>
-                <img src="Agriffa.jpeg" alt="student1" style="width: 2rem;height:2rem;">
+                <img src="img/<?=$st["foto"]?>" alt="photo.jpg" style="width: 2rem;height:2rem;">
             </td>
             <td><?=$st["NIS"]?></td>
-            <td><?=$st["nama"]?></td>
+            <td class="name">
+                <a href="nilai.php?id=<?=$st["id"]?>" title="klik bagian nama untuk mengisi nilai"><?=$st["nama"]?></a></td>
             <td><?=$st["email"]?></td>
             <td><?=$st["domisili"]?></td>
         </tr>
         <?php $i++;?>
         <?php endforeach;?>
     </table>
-    <button class="back"><a href="index.php">🔙 Kembali</a></button>
+    <button class="back" onclick="window.location.href='index.php'">🔙 Kembali</button>
 
 </body>
 </html>

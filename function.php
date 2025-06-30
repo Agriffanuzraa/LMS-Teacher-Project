@@ -23,6 +23,12 @@
     $email= htmlspecialchars($data["email"]);
     $domisili = htmlspecialchars($data["domisili"]);
 
+    // ctype_digit() akan mengecek apakah seluruh string hanya terdiri dari angka (0-9). Pastikan inputnya berupa string ya (jangan integer langsung).
+    if (!ctype_digit($_POST['NIS'])) {
+    echo "<script>alert('NIS hanya boleh berupa angka!');</script>";
+    exit;
+    }
+
     //upload foto dulu , terus prosesnya itu kita ambil nama gambarnya, diupload ke file directory baru kita insert ke database, jadi harus diupload dulu ke database.
     $foto = upload();
     if($foto === false){

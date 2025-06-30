@@ -33,29 +33,27 @@ $jsondata2 = json_encode($datapoint2);
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<style>
-			body{
-				background-color: pink;
-				font-weight: 500;
-			}
 			.back{
-				background-color: blue;
-				margin-top: 2rem;
-				font-weight: 500;
-				width: 100%;
-				border: none;
-				border-radius:6px;
-			}
-			.back a{
-				color: white;
-				text-decoration: none;
-			}
-			.back:hover{
-				background-color: #2c3e50;
-				transition: 0.2s ease-in-out;
-			}
-			.back a:hover{
-				color: rgb(127, 229, 233);
-			}
+    margin-top: 2rem;
+    font-weight: 500;
+    width: 100%;
+}
+	.back{
+		color: white;
+		font-weight: 700;
+		background-color: #2c3e50 ;
+		border-radius: 6px;
+		width: 100%;
+		height: 2rem;
+	}
+	.back:hover{
+		background-color: black;
+		transition: 0.2s ease-in-out;
+	}
+	.back a:hover{
+		color: rgb(127, 229, 233);
+	}
+
 
 		</style>
 		<title>Statistic</title>
@@ -67,7 +65,7 @@ $jsondata2 = json_encode($datapoint2);
 		<div class="chartContainer2">
 			<div id="chartContainer2" style="height: 300px; width: 100%;"></div>
 		</div>
-		<button class="back"><a href="index.php">🔙 Kembali</a></button>
+		<button class="back" onclick="window.location.href='index.php'">🔙 Kembali</button>
 	<script>
 		function chart1() {
 		var chart = new CanvasJS.Chart("chartContainer", {
